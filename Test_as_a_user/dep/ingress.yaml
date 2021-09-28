@@ -8,7 +8,7 @@ spec:
     - apiser.com
     secretName: apiser-secret
   rules:
-  - host: "apiser.com"
+  - host: apiser.com
     http:
       paths:
       - path: /
