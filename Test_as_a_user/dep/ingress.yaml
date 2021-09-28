@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: apiserver-ingress
+spec:
+  tls:
+  - hosts: 
+    - apiser.com
+    secretName: apiser-secret
+  rules:
+  - host: "apiser.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+         serviceName: apiserver-entrypoint
+         servicePort: 8081
+      # - path: /products
+      #   pathType: Prefix
+      #   backend:
+      #    serviceName: apiserver-entrypoint
+      #    servicePort: 8081
+    

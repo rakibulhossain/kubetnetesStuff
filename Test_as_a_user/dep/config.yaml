@@ -1,0 +1,11 @@
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+  name: apiserver-config
+data:
+  app.properties: |
+    structure.types=backend
+  type.properties: |
+    app.type: ecommerce
+    product.type: wear-shop-clothing 
+  

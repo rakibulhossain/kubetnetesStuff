@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apiservertest
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: main
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      volumes:
+        - name: my-vol
+          emptyDir: {}
+        # - name: my-config
+        #   configMap:
+        #      name: apiserver-config
+        - name: my-secret-config
+          projected:
+            sources:
+            - secret:
+                name: apiser-secret
+            - configMap:
+                name: apiserver-config
+        - name: my-hostpath
+          hostPath:
+            path: /rakib
+        - name: my-pv
+          persistentVolumeClaim:
+            claimName: apiserver-pvc
+      containers:
+        - name: hello
+          image: "rakibulhossain/apiserver:0.0.3"
+          #livenessProbe:
+          #  httpGet:
+          #      path: /healthy
+          #      port: 8081
+          #  initialDelaySeconds: 5
+          #  timeoutSeconds: 1
+          #  periodSeconds: 10
+          #  failureThreshold: 3
+          # env:
+          # - name: TLS_CRT
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: apiser-secret
+          #       key: tls.crt
+          # - name: TLS_KEY
+          #   valueFrom:
+          #     secretKeyRef:
+          #       name: apiser-secret 
+          #       key: tls.key 
+          volumeMounts:
+            - name: my-vol
+              mountPath: /pppp 
+            - name: my-secret-config
+              mountPath: /secret-config
+            - name: my-hostpath
+              mountPath: /hello
+            - name: my-pv
+              mountPath: /pv
+          ports:
+            - containerPort: 8081
+              name: http
+              protocol: TCP
+
