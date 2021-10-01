@@ -1,4 +1,4 @@
-module KubernetesStuff/client-go
+module github.com/Rakibul-Hossain/client-go
 
 go 1.17
 
