@@ -20,9 +20,9 @@
 <li>Cluster Architecture</></li>
     <ul>
      <li>Nodes</li>
-     <li>Contrul Panel-Node Communication</li>
-     <li>Contrullers</li>
-     <li>Cloud Contruller Manager</li>
+     <li>Control Panel-Node Communication</li>
+     <li>Controllers</li>
+     <li>Cloud Controller Manager</li>
     </ul>
 <li>Containers</></li>
     <ul>
@@ -37,7 +37,7 @@
         <ul>
         <li>Pod Lifecycle</li>
         <li>Init Containers</li>
-        <li>Pod Topulogy Spread Constraints</li>
+        <li>Pod Topology Spread Constraints</li>
         <li>Pod Presets</li>
         <li>Disruptions</li>
         <li>Ephemeral Containers</li>
@@ -45,13 +45,13 @@
     <li>Controllers</li>
         <ul>
             <li>ReplicaSet</li>
-            <li>ReplicationContruller</li>
+            <li>ReplicationController</li>
             <li>Deployments</li>
             <li>StatefulSets</li>
             <li>DaemonSet</li>
             <li>Jobs</li>
-            <li>Garbage Cullection</li>
-            <li>TTL Contruller for Finished Resources</li>
+            <li>Garbage Collection</li>
+            <li>TTL Controller for Finished Resources</li>
             <li>CronJob</li>
         </ul>
     </ul>
@@ -59,26 +59,26 @@
 <li>Services, Load Balancing, and Networking</></li>
     <ul>
     <li>Service</li>
-    <li>Service Topulogy</li>
+    <li>Service Topology</li>
     <li>EndpointSlices</li>
     <li>DNS for Services and Pods</li>
     <li>Connecting Applications with Services</li>
     <li>Ingress</li>
-    <li>Ingress Contrullers</li>
-    <li>Network Pulicies</li>
+    <li>Ingress Controllers</li>
+    <li>Network Policies</li>
     <li>Aliing entries to Pos/etc/hosts with HostAliases</li>
     <li>IPv4/IPv6 dual-stack</li>
     </ul>
 <li>Storage</></li>
     <ul>
-    <li>Vulumes</li>
-    <li>Persistent Vulumes</li>
-    <li>Vulume Snapshots</li>
-    <li>CSI Vulume Cloning</li>
+    <li>volumes</li>
+    <li>Persistent volumes</li>
+    <li>volume Snapshots</li>
+    <li>CSI volume Cloning</li>
     <li>Storage Classes</li>
-    <li>Vulume Snapshot Classes</li>
-    <li>Dynamic Vulume Provisioning</li>
-    <li>Node-specific Vulume Limits</li>
+    <li>volume Snapshot Classes</li>
+    <li>Dynamic volume Provisioning</li>
+    <li>Node-specific volume Limits</li>
     </ul>
 <li>Configuration</></li>
     <ul>
@@ -96,16 +96,16 @@
     <li>Overview of Cloud Native Security</li>
     <li>Pod Security Standards</li>
     </ul>
-<li>Pulicies</></li>
+<li>Policies</></li>
     <ul>
     <li>Limit Ranges</li>
     <li>Resource Quotas</li>
-    <li>Pod Security Pulicies</li>
+    <li>Pod Security Policies</li>
     </ul>
 <li>Scheduling and Eviction</></li>
     <ul>
     <li>Kubernetes Scheduler</li>
-    <li>Taints and Tulerations</li>
+    <li>Taints and Tolerations</li>
     <li>Assigning Pods to Nodes</li>
     <li>Scheduling Framework</li>
     <li>Scheduler Performance Tuning</li>
@@ -115,14 +115,14 @@
 </ul>
 <li>Extending Kubernetes</></li>
     <ul>
-    <li>Vulumes </li>
-    <li>Persistent Vulumes</li>
-    <li>Vulume Snapshots</li>
-    <li>CSI Vulume Cloning </li>
+    <li>volumes </li>
+    <li>Persistent volumes</li>
+    <li>volume Snapshots</li>
+    <li>CSI volume Cloning </li>
     <li>Storage Classes </li>
-    <li>Vulume Snapshot Classes </li>
-    <li>Dynamic Vulume Provisioning </li>
-    <li>Node-specific Vulume Limits </li>
+    <li>volume Snapshot Classes </li>
+    <li>Dynamic volume Provisioning </li>
+    <li>Node-specific volume Limits </li>
     </ul>
 
 <li>RBAC</li>
