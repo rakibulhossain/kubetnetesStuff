@@ -3,125 +3,129 @@
 <h2>Test as a user</h2>
 <ul>
 <li><h3>Overview</h3></li> 
-    <dl>
-        <dt>1. What is Kubernetes</dt>
-        <dt>2. Kubernetes Components</dt>
-        <dt>3. The Kubernetes API</dt>
-        <dt>4. Working with Kubernetes Objects</dt>
-            <dl>
-            <dd>a. Understanding Kubernetes Objects</dd>
-            <dd>b. Kubernetes Object Management</dd>
-            <dd>c. Object Names and IDs</dd>
-            <dd>d. Namespaces</dd>
-            <dd>e. Labels and Selectors</dd>
-            <dd>f. Annotations</dd>
-            <dd>g. Field Selectors</dd>
-            <dd>h. Recommended Labels</dd>
-            <dl>
-    </dl>
+    <ol>
+        <li>What is Kubernetes</li>
+        <li>Kubernetes Components</li>
+        <li>The Kubernetes API</li>
+        <li>Working with Kubernetes Objects</li>
+            <ol type ='a'>
+            <li>Understanding Kubernetes Objects</li>
+            <li>Kubernetes Object Management</li>
+            <li>Object Names and IDs</li>
+            <li>Namespaces</li>
+            <li>Labels and Selectors</li>
+            <li>Annotations</li>
+            <li>Field Selectors</li>
+            <li>Recommended Labels</li>
+            </ol>
+    </ol>
 <li><h3>Cluster Architecture</h3></li>
-    <dl>
-     <dt>1. Nodes</dt>
-     <dt>2. Control Panel-Node Communication</dt>
-     <dt>3. Controllers</dt>
-     <dt>4. Cloud Controller Manager</dt>
-    </dl>
+    <ol>
+     <li>Nodes</li>
+     <li>Control Panel-Node Communication</li>
+     <li>Controllers</li>
+     <li>Cloud Controller Manager</li>
+    </ol>
 <li><h3>Containers</h3></li>
-    <dl>
-        <dt>1. Images</dt>
-        <dt>2. Container Environments</dt>
-        <dt>3. Runtime Class</dt>
-        <dt>4. Container Lifecycle Hooks</dt>
-    </dl>
+    <ol>
+        <li>Images</li>
+        <li>Container Environments</li>
+        <li>Runtime Class</li>
+        <li>Container Lifecycle Hooks</li>
+    </ol>
 <li><h3>Workloads</h3></li>
-    <dl>
-    <dt>1. Pods</dt>
-        <dd>a.Pod Lifecycle</dd>
-        <dd>b. Init Containers</dd>
-        <dd>c. Pod Topology Spread Constraints</dd>
-        <dd>d. Pod Presets</dd>
-        <dd>e. Disruptions</dd>
-        <dd>f. Ephemeral Containers</dd>
-    <dt>2. Controllers</dt>
-            <dd>a. ReplicaSet</dd>
-            <dd>b. ReplicationController</dd>
-            <dd>c. Deployments</dd>
-            <dd>d. StatefulSets</dd>
-            <dd>e. DaemonSet</dd>
-            <dd>f. Jobs</dd>
-            <dd>g. Garbage Collection</dd>
-            <dd>h. TTL Controller for Finished Resources</dd>
-            <dd>i. CronJob</dd>
-    </dl>
+    <ol>
+    <li>Pods</li>
+        <ol type ='a'>
+        <li>Pod Lifecycle</li>
+        <li>Init Containers</li>
+        <li>Pod Topology Spread Constraints</li>
+        <li>Pod Presets</li>
+        <li>Disruptions</li>
+        <li>Ephemeral Containers</li>
+        </ol>
+    <li>Controllers</li>
+        <ol type ='a'>
+            <li>ReplicaSet</li>
+            <li>ReplicationController</li>
+            <li>Deployments</li>
+            <li>StatefulSets</li>
+            <li>DaemonSet</li>
+            <li>Jobs</li>
+            <li>Garbage Collection</li>
+            <li>TTL Controller for Finished Resources</li>
+            <li>CronJob</li>
+        </ol>
+    </ol>
 
 <li><h3>Services, Load Balancing, and Networking</h3></li>
-    <dl>
-    <dt>1. Service</dt>
-    <dt>2. Service Topology</dt>
-    <dt>3. EndpointSlices</dt>
-    <dt>4. DNS for Services and Pods</dt>
-    <dt>5. Connecting Applications with Services</dt>
-    <dt>6. Ingress</dt>
-    <dt>7. Ingress Controllers</dt>
-    <dt>8. Network Policies</dt>
-    <dt>9. Adding entries to Pos/etc/hosts with HostAliases</dt>
-    <dt>10. IPv4/IPv6 dual-stack</dt>
-    </dl>
+    <ol>
+    <li>Service</li>
+    <li>Service Topology</li>
+    <li>EndpointSlices</li>
+    <li>DNS for Services and Pods</li>
+    <li>Connecting Applications with Services</li>
+    <li>Ingress</li>
+    <li>Ingress Controllers</li>
+    <li>Network Policies</li>
+    <li>Aliing entries to Pos/etc/hosts with HostAliases</li>
+    <li>IPv4/IPv6 dual-stack</li>
+    </ol>
 <li><h3>Storage</h3></li>
-    <dl>
-    <dt>1. Volumes</dt>
-    <dt>2. Persistent Volumes</dt>
-    <dt>3. Volume Snapshots</dt>
-    <dt>4. CSI Volume Cloning</dt>
-    <dt>5. Storage Classes</dt>
-    <dt>6. Volume Snapshot Classes</dt>
-    <dt>7. Dynamic Volume Provisioning</dt>
-    <dt>8. Node-specific Volume Limits</dt>
-    </dl>
+    <ol>
+    <li>Volumes</li>
+    <li>Persistent Volumes</li>
+    <li>Volume Snapshots</li>
+    <li>CSI Volume Cloning</li>
+    <li>Storage Classes</li>
+    <li>Volume Snapshot Classes</li>
+    <li>Dynamic Volume Provisioning</li>
+    <li>Node-specific Volume Limits</li>
+    </ol>
 <li><h3>Configuration</h3></li>
-    <dl>
-    <dt>1. Configuration Best Practices</dt>
-    <dt>2. ConfigMaps</dt>
-    <dt>3. Secrets</dt>
-    <dt>4. Managing Resources for Containers</dt>
-    <dt>5. Pod Overhead</dt>
-    <dt>6. resources Bin Packing for Extended Resources</dt>
-    <dt>7. Organizing Cluster Access Using kubeconfig Files</dt>
-    <dt>8. Pod Priority and Preemption</dt>
-    </dl>
+    <ol>
+    <li>Configuration Best Practices</li>
+    <li>ConfigMaps</li>
+    <li>Secrets</li>
+    <li>Managing Resources for Containers</li>
+    <li>Pod Overhead</li>
+    <li>resources Bin Packing for Extended Resources</li>
+    <li>Organizing Cluster Access Using kubeconfig Files</li>
+    <li>Pod Priority and Preemption</li>
+    </ol>
 <li><h3>Security</h3></li>
-    <dl>
-    <dt>1. Overview of Cloud Native Security</dt>
-    <dt>2. Pod Security Standards</dt>
-    </dl>
+    <ol>
+    <li>Overview of Cloud Native Security</li>
+    <li>Pod Security Standards</li>
+    </ol>
 <li><h3>Policies</h3></li>
-    <dl>
-    <dt>1. Limit Ranges</dt>
-    <dt>2. Resource Quotas</dt>
-    <dt>3. Pod Security Policies</dt>
-    </dl>
+    <ol>
+    <li>Limit Ranges</li>
+    <li>Resource Quotas</li>
+    <li>Pod Security Policies</li>
+    </ol>
 <li><h3>Scheduling and Eviction</h3></li>
-    <dl>
-    <dt>1. Kubernetes Scheduler</dt>
-    <dt>2. Taints and Tolerations</dt>
-    <dt>3. Assigning Pods to Nodes</dt>
-    <dt>4. Scheduling Framework</dt>
-    <dt>5. Scheduler Performance Tuning</dt>
-    </dl>
+    <ol>
+    <li>Kubernetes Scheduler</li>
+    <li>Taints and Tolerations</li>
+    <li>Assigning Pods to Nodes</li>
+    <li>Scheduling Framework</li>
+    <li>Scheduler Performance Tuning</li>
+    </ol>
 <li><h3>Cluster Administration</h3></li>
-<dl>
-</dl>
+<ol>
+</ol>
 <li><h3>Extending Kubernetes</h3></li>
-    <dl>
-    <dt>1. Volumes </dt>
-    <dt>2. Persistent Volumes</dt>
-    <dt>3. Volume Snapshots</dt>
-    <dt>4. CSI Volume Cloning </dt>
-    <dt>5. Storage Classes </dt>
-    <dt>6. Volume Snapshot Classes </dt>
-    <dt>7. Dynamic Volume Provisioning </dt>
-    <dt>8. Node-specific Volume Limits </dt>
-    </dl>
+    <ol>
+    <li>Volumes </li>
+    <li>Persistent Volumes</li>
+    <li>Volume Snapshots</li>
+    <li>CSI Volume Cloning </li>
+    <li>Storage Classes </li>
+    <li>Volume Snapshot Classes </li>
+    <li>Dynamic Volume Provisioning </li>
+    <li>Node-specific Volume Limits </li>
+    </ol>
 
 
 
