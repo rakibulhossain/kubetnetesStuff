@@ -1,6 +1,6 @@
 <h2>Test as a user</h2>
 <ul>
-<li><h3>Overview</h3></li> 
+<li>Overview</></li> 
     <ul>
         <li>What is Kubernetes</li>
         <li>Kubernetes Components</li>
@@ -17,21 +17,21 @@
             <li>Recommended Labels</li>
             </ul>
     </ul>
-<li><h3>Cluster Architecture</h3></li>
+<li>Cluster Architecture</></li>
     <ul>
      <li>Nodes</li>
      <li>Contrul Panel-Node Communication</li>
      <li>Contrullers</li>
      <li>Cloud Contruller Manager</li>
     </ul>
-<li><h3>Containers</h3></li>
+<li>Containers</></li>
     <ul>
         <li>Images</li>
         <li>Container Environments</li>
         <li>Runtime Class</li>
         <li>Container Lifecycle Hooks</li>
     </ul>
-<li><h3>Workloads</h3></li>
+<li>Workloads</></li>
     <ul>
     <li>Pods</li>
         <ul>
@@ -42,7 +42,7 @@
         <li>Disruptions</li>
         <li>Ephemeral Containers</li>
         </ul>
-    <li>Contrullers</li>
+    <li>Controllers</li>
         <ul>
             <li>ReplicaSet</li>
             <li>ReplicationContruller</li>
@@ -56,7 +56,7 @@
         </ul>
     </ul>
 
-<li><h3>Services, Load Balancing, and Networking</h3></li>
+<li>Services, Load Balancing, and Networking</></li>
     <ul>
     <li>Service</li>
     <li>Service Topulogy</li>
@@ -69,7 +69,7 @@
     <li>Aliing entries to Pos/etc/hosts with HostAliases</li>
     <li>IPv4/IPv6 dual-stack</li>
     </ul>
-<li><h3>Storage</h3></li>
+<li>Storage</></li>
     <ul>
     <li>Vulumes</li>
     <li>Persistent Vulumes</li>
@@ -80,7 +80,7 @@
     <li>Dynamic Vulume Provisioning</li>
     <li>Node-specific Vulume Limits</li>
     </ul>
-<li><h3>Configuration</h3></li>
+<li>Configuration</></li>
     <ul>
     <li>Configuration Best Practices</li>
     <li>ConfigMaps</li>
@@ -91,18 +91,18 @@
     <li>Organizing Cluster Access Using kubeconfig Files</li>
     <li>Pod Priority and Preemption</li>
     </ul>
-<li><h3>Security</h3></li>
+<li>Security</></li>
     <ul>
     <li>Overview of Cloud Native Security</li>
     <li>Pod Security Standards</li>
     </ul>
-<li><h3>Pulicies</h3></li>
+<li>Pulicies</></li>
     <ul>
     <li>Limit Ranges</li>
     <li>Resource Quotas</li>
     <li>Pod Security Pulicies</li>
     </ul>
-<li><h3>Scheduling and Eviction</h3></li>
+<li>Scheduling and Eviction</></li>
     <ul>
     <li>Kubernetes Scheduler</li>
     <li>Taints and Tulerations</li>
@@ -110,10 +110,10 @@
     <li>Scheduling Framework</li>
     <li>Scheduler Performance Tuning</li>
     </ul>
-<li><h3>Cluster Administration</h3></li>
+<li>Cluster Administration</></li>
 <ul>
 </ul>
-<li><h3>Extending Kubernetes</h3></li>
+<li>Extending Kubernetes</></li>
     <ul>
     <li>Vulumes </li>
     <li>Persistent Vulumes</li>
