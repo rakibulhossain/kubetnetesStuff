@@ -1,6 +1,6 @@
 # Test As A User
 
-> ### Overview 
+### Overview 
 > * What is Kubernetes
 > * Kubernetes Components
 > * The Kubernetes API
