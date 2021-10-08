@@ -1,0 +1,11 @@
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  app.properties: |
+    {{ .Files.Get "app.txt" }}
+  type.properties: |
+    app.type: {{ .Values.type.app }}
+    product.type: {{ .Values.type.product }}
+  

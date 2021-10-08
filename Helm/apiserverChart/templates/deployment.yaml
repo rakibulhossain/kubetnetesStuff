@@ -1,0 +1,37 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata: 
+  name: {{ .Release.Name }}-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector: 
+    matchLabels:
+      app : {{ .Values.app.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+    spec:
+      volumes:
+        - name: {{ .Release.Name }}-vol
+          emptyDir: {}
+        - name: {{ .Release.Name }}-secret-config
+          projected:
+            sources:
+            - secret:
+                name: {{ .Release.Name }}-secret
+            - configMap:
+                name: {{ .Release.Name }}-config
+      containers:
+        - name: hello
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          volumeMounts:
+            - name: {{ .Release.Name }}-vol
+              mountPath: /pppp 
+            - name: {{ .Release.Name }}-secret-config
+              mountPath: /secret-config
+          ports:
+            - containerPort: 8081
+              name: http
+              protocol: TCP
+
