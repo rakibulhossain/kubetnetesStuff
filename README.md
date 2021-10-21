@@ -1,2 +1,3 @@
-<h1>Kubernetes Cheat Sheet & Learning Stuff</h1>
+### Kubernetes Cheat Sheet & Learning Stuff
 
+![Image of SWE](readme.jpg)
