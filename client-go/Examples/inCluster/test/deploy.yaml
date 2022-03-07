@@ -1,43 +1,51 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test
+  name: test 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: zyx
+      app: test5
   template:
     metadata:
       labels:
-        app: zyx
+        app: test5
     spec:
       containers:
-        - name: xyz
-          image: "in-cluster"
-          #livenessProbe:
-          #  httpGet:
-          #      path: /healthy
-          #      port: 8081
-          #  initialDelaySeconds: 5
-          #  timeoutSeconds: 1
-          #  periodSeconds: 10
-          #  failureThreshold: 3
-          # env:
-          # - name: TLS_CRT
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: apiser-secret
-          #       key: tls.crt
-          # - name: TLS_KEY
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: apiser-secret 
-          #       key: tls.key 
-          
-          ports:
-            - containerPort: 8081
-              name: http
-              protocol: TCP
+      - name: xyz
+        image: "in-cluster"
+        ports:
+        - containerPort: 8081
+          name: http
+          protocol: TCP
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        #livenessProbe:
+        #  httpGet:
+        #      path: /healthy
+        #      port: 8081
+        #  initialDelaySeconds: 5
+        #  timeoutSeconds: 1
+        #  periodSeconds: 10
+        #  failureThreshold: 3
+        # env:
+        # - name: TLS_CRT
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: apiser-secret
+        #       key: tls.crt
+        # - name: TLS_KEY
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: apiser-secret 
+        #       key: tls.key 
+
+
 
 

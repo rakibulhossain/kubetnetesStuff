@@ -1,4 +1,4 @@
-# Test As A User
+# Topics to Learn & Test As A User
 
 ### Overview 
 > * What is Kubernetes
@@ -9,9 +9,9 @@
 >>* Understanding Kubernetes Objects
 >>* Namespaces
 >>* Labels and Selectors
->>* nnotations
->>* ield Selectors
->>* ecommended Labels
+>>* Annotations
+>>* Field Selectors
+>>* Recommended Labels
 
 ### Cluster Architecture
     
@@ -62,17 +62,17 @@
 > * Ingress
 > * Ingress Controllers
 > * Network Policies
-> * Aliing entries to Pos/etc/hosts with HostAliases
+> * Adding entries to Pos/etc/hosts with HostAliases
 > * IPv4/IPv6 dual-stack
     
 ### Storage
     
 > * Persistent volumes
-> * volumes
-> * volume Snapshots
+> * Volumes
+> * Volume Snapshots
 > * CSI volume Cloning
 > * Storage Classes
-> * volume Snapshot Classes
+> * Volume Snapshot Classes
 > * Dynamic volume Provisioning
 > * Node-specific volume Limits
     
@@ -109,12 +109,12 @@
 
 ### Extending Kubernetes
     
-> * volumes 
+> * Volumes 
 > * Persistent volumes
-> * volume Snapshots
+> * Volume Snapshots
 > * CSI volume Cloning 
 > * Storage Classes 
-> * volume Snapshot Classes 
+> * Volume Snapshot Classes 
 > * Dynamic volume Provisioning 
 > * Node-specific volume Limits 
     

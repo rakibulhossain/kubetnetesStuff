@@ -3,11 +3,10 @@ package main
 import (
 	"context"
 	"fmt"
+
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
-	"time"
-
 	// Uncomment to load all auth plugins
 	// _ "k8s.io/client-go/plugin/pkg/client/auth"
 	//
@@ -18,8 +17,8 @@ import (
 	// _ "k8s.io/client-go/plugin/pkg/client/auth/openstack"
 )
 
-func main(){
-	config,err := rest.InClusterConfig()
+func main() {
+	config, err := rest.InClusterConfig()
 	fmt.Println(config)
 	if err != nil {
 		panic(err.Error())
@@ -32,13 +31,16 @@ func main(){
 
 	fmt.Printf("running\n")
 
-	for {
-		pods, err := clientset.CoreV1().Pods("").List(context.TODO(),metav1.ListOptions{})
-		if err != nil {
-			panic(err.Error())
-		}
-		fmt.Printf("There is %d pods in the cluster\n",len(pods.Items))
-
-		time.Sleep(10* time.Second)
+	pods, err := clientset.CoreV1().Pods("").List(context.TODO(), metav1.ListOptions{})
+	if err != nil {
+		panic(err.Error())
 	}
+	fmt.Printf("There is %d pods in the cluster\n", len(pods.Items))
+
+	secrets, err := clientset.CoreV1().Secrets("demo").List(context.TODO(), metav1.ListOptions{})
+	if err != nil {
+		panic(err.Error())
+	}
+	fmt.Printf("There is %d secrets in the cluster\n +%v\n", len(secrets.Items), secrets.Items)
+
 }

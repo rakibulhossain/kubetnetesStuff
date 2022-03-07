@@ -6,10 +6,10 @@ metadata:
       app: my-service
   namespace: default
 spec:
-#  type: NodePort
+  # type: NodePort
   selector:
     app: main
   ports:
   - port: 8081
     targetPort: 8081
-   # nodePort: 30001
+    # nodePort: 30001

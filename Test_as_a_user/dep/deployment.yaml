@@ -13,57 +13,60 @@ spec:
         app: main
     spec:
       volumes:
-        - name: my-vol
-          emptyDir: {}
-        # - name: my-config
-        #   configMap:
-        #      name: apiserver-config
-        - name: my-secret-config
-          projected:
-            sources:
-            - secret:
-                name: apiser-secret
-            - configMap:
-                name: apiserver-config
-        - name: my-hostpath
-          hostPath:
-            path: /rakib
-        - name: my-pv
-          persistentVolumeClaim:
-            claimName: apiserver-pvc
+      - name: my-vol
+        emptyDir: {}
+      - name: my-secret-config
+        projected:
+          sources:
+          - secret:
+              name: apiser-secret
+          - configMap:
+              name: apiserver-config
+      - name: my-hostpath
+        hostPath:
+          path: /rakib
+      - name: my-pv
+        persistentVolumeClaim:
+          claimName: apiserver-pvc
       containers:
-        - name: hello
-          image: "rakibulhossain/apiserver:0.0.3"
-          #livenessProbe:
-          #  httpGet:
-          #      path: /healthy
-          #      port: 8081
-          #  initialDelaySeconds: 5
-          #  timeoutSeconds: 1
-          #  periodSeconds: 10
-          #  failureThreshold: 3
-          # env:
-          # - name: TLS_CRT
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: apiser-secret
-          #       key: tls.crt
-          # - name: TLS_KEY
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: apiser-secret 
-          #       key: tls.key 
-          volumeMounts:
-            - name: my-vol
-              mountPath: /pppp 
-            - name: my-secret-config
-              mountPath: /secret-config
-            - name: my-hostpath
-              mountPath: /hello
-            - name: my-pv
-              mountPath: /pv
-          ports:
-            - containerPort: 8081
-              name: http
-              protocol: TCP
-
+      - name: hello
+        image: "rakibulhossain/apiserver:0.0.3"
+        volumeMounts:
+        - name: my-vol
+          mountPath: /pppp 
+        - name: my-secret-config
+          mountPath: /secret-config
+        - name: my-hostpath
+          mountPath: /hello
+        - name: my-pv
+          mountPath: /pv
+        ports:
+        - containerPort: 8081
+          name: http
+          protocol: TCP
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        # livenessProbe:
+        #  httpGet:
+        #      path: /healthy
+        #      port: 8081
+        #  initialDelaySeconds: 5
+        #  timeoutSeconds: 1
+        #  periodSeconds: 10
+        #  failureThreshold: 3
+        # env:
+        # - name: TLS_CRT
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: apiser-secret
+        #       key: tls.crt
+        # - name: TLS_KEY
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: apiser-secret 
+        #       key: tls.key 
